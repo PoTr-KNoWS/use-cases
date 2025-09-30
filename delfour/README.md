@@ -7,4 +7,5 @@ Ruben has diabetes. When he shops at Delhaize, he wants the portable self-scanne
 
 ## Related repositories
 
+  - [JIRA epic](https://knows-research.atlassian.net/browse/RS-504)
   - [Delfour-Insight-Economy](https://github.com/PoTr-KNoWS/Delfour-Insight-Economy)
