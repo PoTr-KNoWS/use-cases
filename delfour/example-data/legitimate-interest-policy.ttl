@@ -1,0 +1,25 @@
+@prefix dpv: <http://www.w3.org/ns/dpv#>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
+@prefix ex: <http://example.org/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+<urn:uuid:legitimate-interest-policy> a odrl:Offer;
+  dct:description "Instantiated policy that allows Delfour to keep pseudo-anomymised data about users' purchasing habits under legitimate interest.";
+  odrl:permission <urn:uuid:purchasing-habits-permission>.
+
+<urn:uuid:purchasing-habits-permission> a odrl:permission ;
+  odrl:action odrl:read, odrl:archive;
+  odrl:target ex:shoppingList; # TBD: the actual location is still required
+  odrl:assignee ex:delfour;
+  odrl:assigner <https://ruben.verborgh.org/profile/#me>;
+  odrl:constraint <urn:uuid:pseudo-anonymisation-constraint>, <urn:uuid:legitimate-interest-purpose>.
+
+<urn:uuid:pseudo-anonymisation-constraint> a odrl:Constraint;
+  odrl:leftOperand odrl:anonymise;
+  odrl:operator odrl:eq;
+  odrl:rightOperand dpv:Pseudonymisation .
+
+<urn:uuid:legitimate-interest-purpose> a odrl:Constraint;
+  odrl:leftOperand odrl:purpose;
+  odrl:operator odrl:eq;
+  odrl:rightOperand dpv:LegitimateInterest.
