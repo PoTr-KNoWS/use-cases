@@ -8,3 +8,4 @@ This repository houses the shared documents -- user stories, diagrams, examples,
 Current use-cases include:
 
   - [Delfour](delfour)
+  - [Medical Purpose](./medical_purpose/)
