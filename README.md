@@ -9,3 +9,4 @@ Current use-cases include:
 
   - [Delfour](delfour)
   - [Medical Purpose](./medical_purpose/)
+  - [Delegation](./delegation/)
